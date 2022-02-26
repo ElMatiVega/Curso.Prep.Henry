@@ -30,7 +30,7 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status===1){return "Online"}
   else if (status ===2){return "Away"}
-  else if (status !==1||2){return "Offline"}
+  else  {return "Offline"}
 }
 
 function saludo(idioma) {
@@ -42,8 +42,8 @@ function saludo(idioma) {
   // Tu código:
   if (idioma ==="aleman") {return "Guten Tag!"}
   else if (idioma ==="mandarin") {return "Ni Hao!"}
-  if (idioma ==="ingles") {return "Hello!"}
-  else if (idioma !=="aleman"||"mandarin"||"ingles") {return"Hola!"}
+  else if (idioma ==="ingles") {return "Hello!"}
+  else  {return"Hola!"}
 }
 
 function colors(color) {
@@ -67,7 +67,7 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-   if(numero===10){return true} if (numero===5) {return true} 
+   if(numero===10 ||numero===5) {return true} 
    else {return false}
     }
 
@@ -111,14 +111,11 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if ( num1<0||num2<0||num3<0) {return "Hay negativos"}
-  else if(num1===0||num2===0||num3===0){return "Error"}
+  if(num1===0||num2===0||num3===0){return "Error"}
   if (num1>num2&&num1>num3&&num1>0){return"Número 1 es mayor y positivo"}
- if (num3>num1&&num3>num2){return num3+1}
- else {return false}
- 
- 
- 
-}
+  if (num3>num1&&num3>num2){return num3+1}
+  else {return false}
+ }
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -127,7 +124,7 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
  
-  if(numero===0|numero===1){return false}
+  if(numero===0||numero===1){return false}
  for (var i = 2; i<numero; i++) {
    if (numero%i==0)
    {return false}
