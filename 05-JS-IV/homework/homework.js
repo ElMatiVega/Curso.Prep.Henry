@@ -187,11 +187,7 @@ function agregarMetodoCalculoDescuento(producto) {
 //    porcentajeDeDescuento: 0.2,
 //    calcularPrecioDescuento:function(){producto.precio -(producto.precio*producto.porcentajeDeDescuento)},
 //  }
-// producto.calcularPrecioDescuento= function()
-// {
-//   return this.precio-(this.precio*this.porcentajaDescuento)
-// };
-//  return producto;
+
 producto.calcularPrecioDescuento = function() {
   return this.precio - ( this.precio * this.porcentajeDeDescuento );
 };
