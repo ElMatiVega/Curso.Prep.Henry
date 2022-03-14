@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "hola";
+var nuevaString = "String";
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 7;
@@ -63,9 +63,12 @@ function sonIguales(x, y) {
   // De lo contrario, devuelve "false"
   // Tu código:
   
-  if (x == y) {return true}
-   {return false}
-}
+  if (x == y) 
+      {return true};
+  {return false}
+  }
+
+
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
@@ -111,8 +114,8 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num%2==0){return false}
-  {return true}
+  if (num%2==1){return true}
+  {return false}
   
 }
 
@@ -234,13 +237,15 @@ function esVocal(letra){
   //Escribe tu código aquí
  
 
-  if ( letra . longitud  >  1 ) {
-    return  "Dato incorrecto"
+  if ( letra.length>1)
+   {
+    return  "Dato incorrecto";
+   }
+  if ( letra  ===  "a"  ||  letra  ===  "e"  ||  letra  ===  "i"  ||  letra  ===  "o"  ||  letra  ===  "u" )
+   {
+    return  "Es vocal";
   }
-  if ( letra  ===  "a"  ||  letra  ===  "e"  ||  letra  ===  "i"  ||  letra  ===  "o"  ||  letra  ===  "u" ) {
-    return  "Es vocal"
-  }
-  return  "Dato incorrecto"
+  return  "Dato incorrecto";
 
 }
 
