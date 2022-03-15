@@ -7,14 +7,15 @@ function crearGato(nombre, edad) {
   // Devuelve el objeto
   // Tu código:
   var gato=
-  {
+   {
     nombre: nombre,
-    edad:edad,
-    meow: function()
+   };
+    gato.edad=edad;
+    gato.meow= function()
     {
       return "Meow!";
-    },
-  };
+    };
+  
   return gato;
 
 }
@@ -25,7 +26,7 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  objeto[property]=null
+  objeto[property]=null;
   return objeto
 }
 
@@ -145,6 +146,7 @@ function pasarUsuarioAPremium(usuarios) {
   {
     usuarios[i].esPremium=true;
   }
+  
   return usuarios
 }
 
@@ -185,8 +187,9 @@ function agregarMetodoCalculoDescuento(producto) {
 //  {
 //    precio: 20,
 //    porcentajeDeDescuento: 0.2,
-//    calcularPrecioDescuento:function(){producto.precio -(producto.precio*producto.porcentajeDeDescuento)},
+//    calcularPrecioDescuento:function(){precio -(precio*porcentajeDeDescuento)},
 //  }
+// return producto;
 
 producto.calcularPrecioDescuento = function() {
   return this.precio - ( this.precio * this.porcentajeDeDescuento );
