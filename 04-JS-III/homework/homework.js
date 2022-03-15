@@ -29,7 +29,7 @@ function incrementarPorUno(array) {
   // Tu código:
   var mati=[]
   for(var i=0; i < array.length; i++)
-  { mati[i]=array[i]+1}
+  { mati.push(array[i]+1);}
   return mati
   
 }
@@ -40,7 +40,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
   
-  array[array.length]=elemento
+  array.push(elemento);
   return array
 }
 
@@ -50,7 +50,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift(elemento)
+  array.unshift(elemento);
   return array
 }
 
@@ -62,7 +62,7 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   
-  return palabras.join( ' ');
+  return palabras.join(' ');
 }
 
 
@@ -99,14 +99,14 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  return agregarNumeros(resultadosTest) / resultadosTest.length;
+  // return agregarNumeros(resultadosTest) / resultadosTest.length;
 
-  // var suma=0
-  // for(var i=0; i<resultadosTest.length; i++)
-  // {
-  //     promedio= (suma+resultadosTest[i])/resultadosTest.length
-  // }
-  // return promedio
+  var promedio = 0
+  for(var i=0; i<resultadosTest.length; i++)
+  {
+      promedio += resultadosTest[i];
+  }
+  return promedio/resultadosTest.length;
  
 }
 
@@ -156,7 +156,16 @@ function cuentoElementos(arreglo){
   }
 return cantidad
 }
-
+// var arrayContenedor=[];
+// for(var i = 0; i<arreglo.length; i++)
+// {
+//   if(arreglo[i] > 18)
+//   {
+//     arrayContenedor.push(arreglo[i]);
+//   }
+// }
+// return arrayContenedor;
+// }
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
@@ -180,7 +189,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   let num = n.toString()
-  if(num.charAt(0) === "9"){
+  if(num[0] === "9"){
     return true
   }
   return false
@@ -250,27 +259,27 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
- var arre=[];
- var n=numero;
+ var arraynumeros=[];
+ var suma=numero;
  for(var i=0;i<=10;i++)
  {
-   n= n+2
-   if (n===i)
+   suma= suma+2
+   if (suma===i)
    {
      break;
    }
    else
    {
-     arre.push(n);
+     arraynumeros.push(suma);
    }
  }
-  if(i<10)
+  if(arraynumeros.length<10)
   {
-    return "Se interrumpió la ejecución"
+    return "Se interrumpió la ejecución";
   }
-  else
+  else if(arraynumeros.length===10)
   {
-    return arre;
+    return arraynumeros;
   }
 }
 
