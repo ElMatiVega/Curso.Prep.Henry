@@ -261,9 +261,9 @@ function breakStatement(numero) {
   // Tu código:
  var arraynumeros=[];
  var suma=numero;
- for(var i=0;i<=10;i++)
+ for(var i=0;i<10;i++)
  {
-   suma= suma+2
+   suma= suma + 2
    if (suma===i)
    {
      break;
