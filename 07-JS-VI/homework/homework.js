@@ -5,7 +5,7 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
 
-
+  //tambien return nombre[0].toUpperCase() + nombre.slice(1);
   return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 }
 
@@ -31,6 +31,11 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
+  //var suma = 0;
+  //for (var i = 0; i<numeros.length; i++)
+  //{ suma = suma + numeros[i]}
+  //cb(suma)
+  //}
 var sumaTotal=numeros.reduce(function(acum, elem)
 {
   return acum+elem
@@ -47,6 +52,13 @@ function forEach(array, cb) {
   {
     cb(elementos);
   });
+  //forEach simplificado
+  //array.forEach(cb);
+  //
+  //Con un ciclo for:
+  // for( var i=0; i<array.length; i++){
+  //   cb(array[i])
+  // }
 }
 
 function map(array, cb) {
@@ -67,10 +79,10 @@ function filter(array) {
   //Tu código:
 //  return array.filter(function(element)
 //   { 
-//     return element[0]==="a";
+//     return element[0].toLowerCase()==="a";
 //   });
   
-// }
+// } -----------------------------
   return array.filter((e) => e[0] === "a");
 
   

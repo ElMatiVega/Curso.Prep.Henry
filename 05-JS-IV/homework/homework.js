@@ -86,7 +86,7 @@ function tieneEmail(usuario) {
     return false;
   }
 }
-
+// console.log(tieneEmail(usuario[email]))
 
 
 function tienePropiedad(objeto, propiedad) {
@@ -103,7 +103,7 @@ function tienePropiedad(objeto, propiedad) {
     return false;
   }
 }
-
+// console.log(tienePropiedad({propiedad:"propiedad"}))
 function verificarPassword(usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden

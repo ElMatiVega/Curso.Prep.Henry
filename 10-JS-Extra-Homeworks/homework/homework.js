@@ -23,6 +23,11 @@ nuevoArray.push([clave,objeto[clave]])
 return nuevoArray;
 }
 
+// console.log(deObjetoAmatriz({
+//   D: 1,
+//   B: 2,
+//   C: 3
+// }))
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
@@ -35,7 +40,7 @@ var objeto = {};
     {
      if(objeto.hasOwnProperty(string[i]))
        {
-         objeto[string[i]] = objeto[string[i]]+1;
+         objeto[string[i]] = objeto[string[i]]+1;//objeto[string[i]]++
        } 
      else
        {
@@ -67,8 +72,11 @@ function capToFront(s) {
       mayúsculas += s[i];
     }
   }
-  return mayúsculas + minusculas;
+  return mayúsculas.concat(minusculas);
 }
+// console.log(capToFront("soyHENRY"))
+
+//return s[i].toUpperCase()+s.slice();
 
 
 function asAmirror(str) {
@@ -84,6 +92,8 @@ function asAmirror(str) {
   });
   return arrayFinal.join(" ");
 } 
+
+// console.log(asAmirror("The Henry Challenge is close!"));
 
 
 function capicua(numero){
@@ -102,27 +112,37 @@ function capicua(numero){
    return "No es capicua";
  }
 }
-
+// console.log(capicua(132))
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
- var difAbc = "";
- for (var i=0; i <cadena.length;i++)
- {
-   if(cadena[i]==="a"||cadena[i]==="b"||cadena[i]==="c")
-   {
-     continue;
-   }
-   else
-   {
-     difAbc += cadena[i];
-   }
- }
-  return difAbc;
-}
+//  var difAbc = "";
+//  for (var i=0; i <cadena.length;i++)
+//  {
+//    if(cadena[i]==="a"||cadena[i]==="b"||cadena[i]==="c")
+//    {
+//      continue;
+//    }
+//    else
+//    {
+//      difAbc += cadena[i];
+//    }
+//  }
+//   return difAbc;
+// }
 
+var cadena2="";
+for (var i=0; i <cadena.length;i++){
+  if (cadena[i]!=="a"&&cadena[i]!=="b"&&cadena[i]!=="c"){
+    cadena2 += cadena[i]
+  }
+}
+return cadena2
+
+}
+console.log(deleteAbc("Matías"))
 
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena

@@ -240,8 +240,16 @@ function doWhile(numero) {
     i  =  i  +  1 ;
     a  =  a  +  5 ;
   }
-  while ( i  <  8 ) ;
-  return  a 
+  // while ( i  <  8 ) ;
+  // return  a 
+  // var  contador =  8 ;
+  // var resultado  =  5 ;
+  // do  {
+  //   contador -= 1 ;
+  //   resultado +=  5 ;
+  // }
+  // while (contador !== 0 ) 
+  // return numero + resultado
 }
 
 // No modificar nada debajo de esta línea
